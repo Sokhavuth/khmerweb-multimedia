@@ -1,8 +1,9 @@
 #setConnection.py
-import sqlite3, config
+import config, pymongo
 
 def call():
-    connection = sqlite3.connect(config.kdict['DATABASE_URI'])
-    cursor = connection.cursor()
+    myclient = pymongo.MongoClient(config.kdict['MONGODB_URI'])
+    mongodb = myclient["multimedia"]
+    mongocol = mongodb["users"]
 
-    return cursor, connection
+    return mongocol
