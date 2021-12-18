@@ -2,7 +2,7 @@
 import config
 from copy import deepcopy
 from bottle import Bottle, template, static_file, request, response, redirect
-#from controllers.login import checkLogged
+from controllers.login import checkLogged
 
 app = Bottle()
 
@@ -46,5 +46,8 @@ def loadFont(filename):
 
 @app.route('/')
 def index():
-    
-    return "Hello Wold!"
+    if checkLogged.call():
+        redirect('/dashboard')
+        
+    kdict = deepcopy(config.kdict)
+    return template('index', data=kdict)
