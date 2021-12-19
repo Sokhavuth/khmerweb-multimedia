@@ -1,0 +1,22 @@
+/*asset/css/category.css*/
+.Category{
+    background: lightgrey;
+}
+
+.Category form{
+    display: grid;
+    grid-template-columns: 20% 50%;
+    grid-gap: 5px;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.Category form a{
+    color: black;
+    text-align: right;
+}
+
+.Category form input{
+    font: var(--body-font);
+    padding: 2px 5px;
+}
