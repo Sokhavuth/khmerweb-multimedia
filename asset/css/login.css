@@ -1,14 +1,14 @@
-/*asset/css/index.css*/
+/*asset/css/login.css*/
 section{
     width: 400px;
     margin: 100px auto;
-    background: lightgrey;
+    background: var(--foreground);
 }
 
 section header{
     text-align: center;
     font: 16px/1.5 Oswald, Koulen;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid white;
     padding: 5px;
 }
 
@@ -22,7 +22,7 @@ section form{
 
 section form a{
     text-align: right;
-    color: black;
+    color: var(--color);
 }
 
 section form input{

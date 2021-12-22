@@ -1,7 +1,0 @@
-/*asset/css/partials/body.css*/
-.Body{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 24% auto;
-    grid-gap: 1%;
-}

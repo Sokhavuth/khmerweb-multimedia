@@ -7,7 +7,7 @@
 
 a{
     text-decoration: none;
-    color: teal;
+    color: #f9db0f;
 }
 
 a:hover{
@@ -21,9 +21,15 @@ a:hover{
 
 :root{
     --body-font: 14px/1.5 Vidaloka, OdorMeanChey;
+    --background-dark: #003399;
+    --foreground: #0099cc;
+    --background-light: #66ccff;
+    --background: #ccffcc;
+    --color: white;
 }
 
 body{
-    background: grey;
+    background: var(--background);
     font: var(--body-font);
+    color: var(--color);
 }

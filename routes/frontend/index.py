@@ -38,4 +38,4 @@ def loadFont(filename):
 
 @app.route('/')
 def index():
-    return config.kdict['siteTitle']
+    return config.kdict['siteLogo']
