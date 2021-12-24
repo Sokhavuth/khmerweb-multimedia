@@ -1,12 +1,16 @@
 #routes/frontend/login.py
-from bottle import Bottle
+from bottle import Bottle, redirect
+from controllers.frontend.login import checkLogged
 
 app = Bottle()
 
 @app.route('/')
 def index():
-    from controllers.frontend.login import get
-    return get.call()
+    if checkLogged.call():
+        redirect('/admin/post')
+    else:
+        from controllers.frontend.login import get
+        return get.call()
 
 @app.route('/', method="post")
 def checkUser():
