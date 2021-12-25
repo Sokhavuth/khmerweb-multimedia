@@ -1,13 +1,13 @@
-<!--views/dashboard/admin.tpl-->
+<!--views/dashboard/index.tpl-->
 % rebase('base.tpl')
 
 <link href="/static/styles/partials/header.css" rel="stylesheet"></link>
 <script src="/static/scripts/paginate.js"></script>
 <section class='Head'>
     <header class='region'>
-        <div class='site-logo'>{{ data['pageTitle'] }}</div>
+        <div class='site-logo'>{{ data['siteLogo'] }}</div>
 
-        <form action='/backend/search' method='post'>
+        <form action='/dashboard/search' method='post'>
             <select name="select">
                 <option>ការផ្សាយ</option>
                 <option>ជំពូក</option>
@@ -18,18 +18,17 @@
             <input type="submit" value='បញ្ជូន'​ />
         </form>
 
-        <div class='logout'><a href='/'>ទំព័រ​មុខ</a> | <a href='/login/logout'>ចេញ​ក្រៅ</a></div>
+        <div class='logout'><a href='/dashboard/logout'>ចេញ​ក្រៅ</a></div>
     </header>
 </section>
 
 <link href="/static/styles/partials/body.css" rel="stylesheet"></link>
 <section class='Body region'>
-    
-    %include('backend/menu.tpl')
+    %include('dashboard/menu.tpl')
 
     <%
     if 'post' in data['route']:
-        include('backend/post.tpl')
+        include('dashboard/post.tpl')
     elif 'category' in data['route']:
         include('dashboard/category.tpl')
     elif 'book' in data['route']:
@@ -40,7 +39,6 @@
         include('dashboard/user.tpl')
     end
     %>
-
 </section>
 
 <link href="/static/styles/partials/listing.css" rel="stylesheet"></link>

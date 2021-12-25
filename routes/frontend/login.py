@@ -16,3 +16,8 @@ def index():
 def checkUser():
     from controllers.frontend.login import checkUser
     return checkUser.call()
+
+@app.route('/logout')
+def logout():
+    from controllers.frontend.login import logout
+    return logout.call()
