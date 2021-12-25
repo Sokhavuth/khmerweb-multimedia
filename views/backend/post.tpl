@@ -5,12 +5,13 @@
 
 <section class='Main'>
     <div class='content'>
-        <form action='/dashboard/post' method='post' >
+        <form action='/admin/post' method='post' >
             %if 'edit' in data:
             <input type='text' name='title' value='{{data["item"][0]}}' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" >{{data["item"][4]}}</textarea>
             <div class='wrapper'>
                 <select name='category' class='category' >
+                    <option>Movie</option>
                     %if 'categories' in data:
                     %for category in data['categories']:
                         <option>{{ category[0] }}</option>
@@ -29,6 +30,7 @@
             <textarea name="content" id="editor" ></textarea>
             <div class='wrapper'>
                 <select name='category'>
+                    <option>Movie</option>
                     %if 'categories' in data:
                     %for category in data['categories']:
                         <option>{{ category[0] }}</option>
