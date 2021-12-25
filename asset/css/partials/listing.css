@@ -24,6 +24,18 @@
     background: var(--foreground);
 }
 
+.Listing .items .item a{
+    position: relative;
+}
+
+.Listing .items .item .play-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
 .Listing .items .item .thumb{
     width: 100%;
     float: left;

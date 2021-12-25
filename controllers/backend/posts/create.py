@@ -11,14 +11,15 @@ def call():
     content = request.forms.getunicode('content')
     category = request.forms.getunicode('category')
     entries = request.forms.getunicode('entries')
+    authorID = request.get_cookie('userID', secret=config.kdict['SECRET_KEY'])
 
     if not edit:
         id = uuid.uuid4().hex
     else:
         id = edit
-
+    
     userRole = request.get_cookie('userRole', secret=config.kdict['SECRET_KEY'])
     if userRole != 'visitor':
-        createdb.call(title, thumb, datetime, id, edit, content, category, entries)
+        createdb.call(title, thumb, datetime, id, edit, content, category, entries, authorID)
 
     return redirect('/admin/post')

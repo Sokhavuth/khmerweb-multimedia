@@ -65,20 +65,24 @@
                 }
                 </style>
                 %end
-                <a href="/{{data['route']}}/{{item[3]}}"><img class='thumb' src="{{item[1]}}" /></a>
+                <a href="/{{data['route']}}/{{item['id']}}">
+                    <img class='thumb' src="{{item['thumb']}}" />
+                    %if item['entries']:
+                    <img class='play-icon' src="/static/images/play.png" />
+                </a>
                
 
                 <div class='wrapper'>
-                    <a href="/{{data['route']}}/{{item[3]}}">{{item[0]}}</a>
+                    <a href="/{{data['route']}}/{{item['id']}}">{{item['title']}}</a>
                     <p class='date'></p>
                     <script>
-                        $('.items .item .date').html(new Date("{{item[2]}}").toLocaleDateString()) 
+                        $('.items .item .date').html(new Date("{{item['datetime']}}").toLocaleDateString()) 
                     </script>
                 </div>
                 
                 <div class='icon'>
-                    <a href='/dashboard/{{data["route"]}}/edit/{{item[3]}}'><img src='/static/images/edit.png' /></a>
-                    <a href='/dashboard/{{data["route"]}}/delete/{{item[3]}}'><img src='/static/images/delete.png' /></a>
+                    <a href='/admin/{{data["route"]}}/edit/{{item["id"]}}'><img src='/static/images/edit.png' /></a>
+                    <a href='/admin/{{data["route"]}}/delete/{{item["id"]}}'><img src='/static/images/delete.png' /></a>
                 </div>
             </div>
         %end

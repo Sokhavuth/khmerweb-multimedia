@@ -1,7 +1,7 @@
 #models/postdb/createdb.py
 import setConnection
 
-def call(title, thumb, datetime, id, edit, content, category, entries):
+def call(title, thumb, datetime, id, edit, content, category, entries, authorID):
     
     mycol = setConnection.call("posts")
 
@@ -13,7 +13,8 @@ def call(title, thumb, datetime, id, edit, content, category, entries):
             "datetime":datetime,
             "content":content,
             "category":category,
-            "entries":entries
+            "entries":entries,
+            "authorID":authorID
         }
         
         mycol.insert_one(post)
