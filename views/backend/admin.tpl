@@ -52,8 +52,8 @@
     %end
 
     <div class='items'>
-        %if 'items' in data:
-        %for item in data['items']:
+            %if 'items' in data:
+            %for item in data['items']:
             <div class='item'>
                 %if data['route'] == 'user':
                 <style>
@@ -69,6 +69,7 @@
                     <img class='thumb' src="{{item['thumb']}}" />
                     %if item['entries']:
                     <img class='play-icon' src="/static/images/play.png" />
+                    %end
                 </a>
                
 
@@ -85,9 +86,10 @@
                     <a href='/admin/{{data["route"]}}/delete/{{item["id"]}}'><img src='/static/images/delete.png' /></a>
                 </div>
             </div>
-        %end
-        %end
+            %end
+            %end
     </div>
+    
 
     <script>
         var route = "{{data['route']}}"

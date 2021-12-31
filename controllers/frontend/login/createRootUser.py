@@ -8,15 +8,15 @@ def call():
     mydb = myclient["multimedia"]
     mycol = mydb["users"]
 
-    password = b"Guest2021"
+    password = b"Sokhavuth2021"
     hashedPassword = bcrypt.hashpw(password, bcrypt.gensalt())
 
     user = { 
         "userID": uuid.uuid4().hex, 
-        "email": "guest@khmerweb.app",
-        "username": "guest",
+        "email": "sokhavuth@khmerweb.app",
+        "username": "Sokhavuth",
         "password": hashedPassword,
-        "role":"visitor",
+        "role":"Author",
         "thumb":"",
         "info":"",
         "video":"",

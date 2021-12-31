@@ -7,8 +7,8 @@
     <div class='content'>
         <form action='/admin/post' method='post' >
             %if 'edit' in data:
-            <input type='text' name='title' value='{{data["item"][0]}}' placeholder='ចំណងជើង' required />
-            <textarea name="content" id="editor" >{{data["item"][4]}}</textarea>
+            <input type='text' name='title' value='{{data["item"]["title"]}}' placeholder='ចំណងជើង' required />
+            <textarea name="content" id="editor" >{{data["item"]["content"]}}</textarea>
             <div class='wrapper'>
                 <select name='category' class='category' >
                     <option>Movie</option>
@@ -18,13 +18,13 @@
                     %end
                     %end
                 </select>
-                <script>$(".category").val("{{data['item'][5]}}").change();</script>
-                <input type='text' name='thumb' value='{{data["item"][1]}}' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
-                <input type='datetime-local' value='{{data["item"][2]}}' name='datetime' required />
-                <input type='hidden' name='editid' value='{{data["item"][3]}}' />
+                <script>$(".category").val("{{data['item']['category']}}").change();</script>
+                <input type='text' name='thumb' value='{{data["item"]["thumb"]}}' required placeholder="តំណរ​ភ្ជាប់​រូប​តំណាង" />
+                <input type='datetime-local' value='{{data["item"]["datetime"]}}' name='datetime' required />
+                <input type='hidden' name='editid' value='{{data["item"]["id"]}}' />
                 <input type='submit' value='ចុះ​ផ្សាយ' />
             </div>
-            <input name='entries' value='{{!data["item"][6]}}' type='hidden' />
+            <input name='entries' value='{{!data["item"]["entries"]}}' type='hidden' />
             %else:
             <input type='text' name='title' placeholder='ចំណងជើង' required />
             <textarea name="content" id="editor" ></textarea>
@@ -66,7 +66,11 @@
         
         %if 'edit' in data:
             <script>
-                var entries = JSON.parse('{{!data["item"][6]}}')
+                var entries = JSON.parse('{{!data["item"]["entries"]}}')
+            </script>
+        %else:
+            <script>
+                var entries = []
             </script>
         %end
 
