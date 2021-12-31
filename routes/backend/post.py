@@ -21,9 +21,17 @@ def create():
         redirect('/login')
 
 @app.route('/edit/<id>')
-def create(id):
+def edit(id):
     if checkLogged.call():
         from controllers.backend.posts import edit
         return edit.call(id)
+    else:
+        redirect('/login')
+
+@app.route('/delete/<id>')
+def delete(id):
+    if checkLogged.call():
+        from controllers.backend.posts import delete
+        return delete.call(id)
     else:
         redirect('/login')
