@@ -75,9 +75,9 @@
 
                 <div class='wrapper'>
                     <a href="/{{data['route']}}/{{item['id']}}">{{item['title']}}</a>
-                    <p class='date'></p>
+                    <p class="{{item['id']}}"></p>
                     <script>
-                        $('.items .item .date').html(new Date("{{item['datetime']}}").toLocaleDateString()) 
+                        $(".items .item .{{item['id']}}").html(new Date("{{item['datetime']}}").toLocaleDateString()) 
                     </script>
                 </div>
                 

@@ -35,3 +35,11 @@ def delete(id):
         return delete.call(id)
     else:
         redirect('/login')
+
+@app.route('/paginate/<page>')
+def paginate(page):
+    if checkLogged.call():
+        from controllers.backend.posts import paginate
+        return paginate.call(int(page))
+    else:
+        redirect('/login')
