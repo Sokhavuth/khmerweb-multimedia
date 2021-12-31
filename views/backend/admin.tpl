@@ -31,13 +31,13 @@
     if 'post' in data['route']:
         include('backend/post.tpl')
     elif 'category' in data['route']:
-        include('dashboard/category.tpl')
+        include('backend/category.tpl')
     elif 'book' in data['route']:
-        include('dashboard/book.tpl')
+        include('backend/book.tpl')
     elif 'upload' in data['route']:
-        include('dashboard/upload.tpl')
+        include('backend/upload.tpl')
     elif 'user' in data['route']:
-        include('dashboard/user.tpl')
+        include('backend/user.tpl')
     end
     %>
 

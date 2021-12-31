@@ -1,4 +1,4 @@
-<!--views/dashboard/category-->
+<!--views/backend/category-->
 <link href='/static/styles/category.css' rel='stylesheet' />
 
 <section class='Category'>

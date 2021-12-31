@@ -1,6 +1,6 @@
 /*asset/css/category.css*/
 .Category{
-    background: lightgrey;
+    background: var(--foreground);
 }
 
 .Category form{
@@ -12,7 +12,6 @@
 }
 
 .Category form a{
-    color: black;
     text-align: right;
 }
 

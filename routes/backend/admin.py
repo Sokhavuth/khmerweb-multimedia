@@ -8,3 +8,6 @@ app = Bottle()
 
 from routes.backend import post
 app.mount('/post', post.app)
+
+from routes.backend import category
+app.mount('/category', category.app)

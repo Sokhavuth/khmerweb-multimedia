@@ -1,4 +1,4 @@
-#controllers/frontend/login/get.py
+#controllers/backend/posts/get.py
 import config
 from copy import deepcopy
 from bottle import template
