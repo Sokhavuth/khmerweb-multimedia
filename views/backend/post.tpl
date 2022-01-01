@@ -11,10 +11,9 @@
             <textarea name="content" id="editor" >{{data["item"]["content"]}}</textarea>
             <div class='wrapper'>
                 <select name='category' class='category' >
-                    <option>Movie</option>
                     %if 'categories' in data:
                     %for category in data['categories']:
-                        <option>{{ category[0] }}</option>
+                        <option>{{ category['title'] }}</option>
                     %end
                     %end
                 </select>
@@ -30,10 +29,9 @@
             <textarea name="content" id="editor" ></textarea>
             <div class='wrapper'>
                 <select name='category'>
-                    <option>Movie</option>
                     %if 'categories' in data:
                     %for category in data['categories']:
-                        <option>{{ category[0] }}</option>
+                        <option>{{ category['title'] }}</option>
                     %end
                     %end
                 </select>

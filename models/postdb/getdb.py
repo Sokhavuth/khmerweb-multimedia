@@ -7,4 +7,7 @@ def call(amount):
     posts = mycol.find().sort([("datetime", -1), ("_id", -1)]).limit(amount)
     count = mycol.count_documents({})
 
-    return posts, count
+    mycol = setConnection.call("categories")
+    categories = mycol.find().sort('title', 1)
+
+    return posts, count, categories

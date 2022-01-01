@@ -9,4 +9,7 @@ def call(id, amount):
 
     post = mycol.find_one({"id": id})
 
-    return posts, count, post
+    mycol = setConnection.call("categories")
+    categories = mycol.find().sort('title', 1)
+
+    return posts, count, post, categories

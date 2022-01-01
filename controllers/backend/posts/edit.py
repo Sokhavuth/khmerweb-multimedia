@@ -10,10 +10,11 @@ def call(id):
     kdict['route'] = 'post'
     kdict['edit'] = True
 
-    posts, count, post = editdb.call(id, kdict['maxItemList'])
+    posts, count, post, categories = editdb.call(id, kdict['maxItemList'])
 
     kdict['items'] = posts
     kdict['count'] = count
     kdict['item'] = post
+    kdict['categories'] = categories
     
     return template('backend/admin.tpl', data=kdict)
