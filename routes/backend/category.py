@@ -27,3 +27,11 @@ def create(id):
         return edit.call(id)
     else:
         redirect('/login')
+
+@app.route('/delete/<id>')
+def create(id):
+    if checkLogged.call():
+        from controllers.backend.categories import delete
+        return delete.call(id)
+    else:
+        redirect('/login')
