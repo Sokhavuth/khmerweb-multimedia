@@ -1,5 +1,5 @@
 #models/categorydb/deletedb.py
-import setConnection,  config
+import setConnection, config
 from bottle import request
 
 def call(id):

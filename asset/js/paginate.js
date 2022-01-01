@@ -17,7 +17,7 @@ function appendItem(items, route){
         for(var item in items){
             html += `<div class='item'>`
             html += `<a href="/${route}/${items[item]['id']}"><img class='thumb' src="${items[item]['thumb']}" />`
-            if(items[item]['entries'] !== ''){
+            if(('entries' in items[item]) && (items[item]['entries'] !== '')){
                 html += `<img class='play-icon' src="/static/images/play.png" />`
             }
             html += `</a>`
