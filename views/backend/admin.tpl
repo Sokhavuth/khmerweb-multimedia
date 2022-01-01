@@ -67,7 +67,7 @@
                 %end
                 <a href="/{{data['route']}}/{{item['id']}}">
                     <img class='thumb' src="{{item['thumb']}}" />
-                    %if (data['route'] != "category") and (item['entries']):
+                    %if ('entries' in item) and (item['entries']):
                     <img class='play-icon' src="/static/images/play.png" />
                     %end
                 </a>

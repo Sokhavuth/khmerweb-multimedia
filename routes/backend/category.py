@@ -19,3 +19,11 @@ def create():
         return create.call()
     else:
         redirect('/login')
+
+@app.route('/edit/<id>')
+def create(id):
+    if checkLogged.call():
+        from controllers.backend.categories import edit
+        return edit.call(id)
+    else:
+        redirect('/login')
