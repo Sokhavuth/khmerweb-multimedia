@@ -1,0 +1,64 @@
+/*asset/css/partials/front_menu.css*/
+
+.Random-thumb .wrapper{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 8px;
+    background: white;
+    padding: 0 8px 8px;
+}
+
+.Random-thumb .wrapper .thumb{
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.Random-thumb .wrapper .thumb a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Random-thumb .wrapper .thumb img{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.Random-thumb .reload{
+    text-align: center;
+    background: lightgrey;
+    padding: 5px 0 0;
+}
+
+.Random-thumb .reload img{
+    height: 25px;
+}
+
+.Random-thumb .Column{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.Random-thumb .Column ul{
+    list-style-position: inside;
+    background: white;
+    color: grey;
+    padding: 20px 8px 8px;
+}
+
+.Random-thumb .Column ul a{
+    color: grey;
+}
+
+@media only screen and (max-width: 600px){
+    .Random-thumb .wrapper{
+        grid-template-columns: 100%;
+    }
+
+    .Random-thumb .Column{
+        grid-template-columns: 100%;
+    }
+}
