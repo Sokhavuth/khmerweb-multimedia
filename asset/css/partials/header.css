@@ -33,3 +33,14 @@
 .Head .logout a{
     color: white;
 }
+
+@media only screen and (max-width: 600px){
+    .Head header{
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .Head .logout{
+        text-align: center;
+    }
+}

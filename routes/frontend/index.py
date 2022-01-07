@@ -38,4 +38,5 @@ def loadFont(filename):
 
 @app.route('/')
 def index():
-    return config.kdict['pageTitle']
+    from controllers.frontend import front
+    return front.call()
