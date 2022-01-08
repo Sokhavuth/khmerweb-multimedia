@@ -36,9 +36,9 @@
 .Random-thumb .player .playlist .video-part{
     background: lightgrey;
     color: rgb(87, 87, 87);
-    font-weight: bold;
     padding: 10px;
     margin-bottom: 5px;
+    font: bold 15px/1.5 Courgette, HandWriting;
 }
 
 .Random-thumb .player .playlist div:hover{
