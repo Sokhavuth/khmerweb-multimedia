@@ -10,12 +10,12 @@
     padding: 15px;
 }
 
-.Random-thumb .player .screen{
+.Random-thumb .player .screen .video-wrapper{
     position: relative;
     padding-top: 56.25%;
 }
 
-.Random-thumb .player .screen iframe{
+.Random-thumb .player .screen .video-wrapper iframe{
     position: absolute;
     top: 0;
     left: 0;
@@ -23,8 +23,13 @@
     height: 100%;
 }
 
+.Random-thumb .player .screen .text-content{
+    color: grey;
+    padding-top: 10px;
+}
+
 .Random-thumb .player .playlist{
-    height: 440px;
+    height: 420px;
     overflow: auto;
 }
 
