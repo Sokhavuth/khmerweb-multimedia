@@ -2,7 +2,6 @@
 .Head{
     background: var(--foreground);
     padding: 7px;
-    border-bottom: 7px solid white;
 }
 
 .Head header{

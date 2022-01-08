@@ -5,7 +5,7 @@
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 8px;
     background: white;
-    padding: 0 8px 8px;
+    padding: 8px;
 }
 
 .Random-thumb .wrapper .thumb{
