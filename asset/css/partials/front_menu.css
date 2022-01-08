@@ -40,13 +40,13 @@
 .Random-thumb .Column{
     display: grid;
     grid-template-columns: auto auto auto;
+    padding: 15px;
+    background: white;
 }
 
 .Random-thumb .Column ul{
     list-style-position: inside;
-    background: white;
     color: grey;
-    padding: 20px 8px 8px;
 }
 
 .Random-thumb .Column ul a{

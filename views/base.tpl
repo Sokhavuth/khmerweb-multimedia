@@ -13,5 +13,6 @@
   <body>
     <link href="/static/styles/base.css" rel="stylesheet"></link>
     {{!base}}
+    <footer style='text-align:center;padding: 30px;'>&copy 2022 Khmer Web</footer>
   </body>
 </html>

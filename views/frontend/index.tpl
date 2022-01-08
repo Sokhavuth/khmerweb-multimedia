@@ -21,14 +21,13 @@
     </header>
 </section>
 
-<link href="/static/styles/partials/frontend_body.css" rel="stylesheet"></link>
 <section class='Body region'>
-    
-    %#include('frontend/menu.tpl')
 
     <%
     if 'front' in data['route']:
         include('frontend/front.tpl')
+    elif 'post' in data['route']:
+        include('frontend/post.tpl')
     end
     %>
 

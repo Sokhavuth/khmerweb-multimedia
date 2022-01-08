@@ -40,3 +40,8 @@ def loadFont(filename):
 def index():
     from controllers.frontend import front
     return front.call()
+
+@app.route('/post/<id>')
+def post(id):
+    from controllers.frontend import post
+    return post.call(id)
