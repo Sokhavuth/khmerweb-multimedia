@@ -31,27 +31,27 @@
                     {{data["posts"][v]["title"]}}
                 </a> 
             </li>
-            %if v == 19:
+            %if v == 24:
                 %break
             %end
         %end
         </ul>
 
         <ul>
-            %for v in range(20, len(data['posts'])): 
+            %for v in range(25, len(data['posts'])): 
                 <li>
                     <a href='/post/{{data["posts"][v]["id"]}}'>
                         {{data["posts"][v]["title"]}}
                     </a> 
                 </li>
-                %if v == 34:
+                %if v == 44:
                     %break
                 %end
             %end
         </ul>
 
         <ul>
-            %for v in range(35, len(data['posts'])): 
+            %for v in range(45, len(data['posts'])): 
                 <li>
                     <a href='/post/{{data["posts"][v]["id"]}}'>
                         {{data["posts"][v]["title"]}}
