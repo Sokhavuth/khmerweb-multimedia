@@ -1,11 +1,12 @@
 #models/postdb/random.py
 import setConnection
 
-def call(amount):
+def call(amount,id=''):
     mycol = setConnection.call("posts")
 
-    pipeline = [{"$sample":{"size": amount}}]
+    pipeline = [{"$match":{'id': {"$ne": id}}},{"$sample":{"size": amount}}]
     results = mycol.aggregate(pipeline)
     posts = [post for post in results]
 
     return posts
+    

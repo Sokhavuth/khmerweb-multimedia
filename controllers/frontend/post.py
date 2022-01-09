@@ -9,6 +9,6 @@ def call(id):
     kdict['pageTitle'] = 'ទំព័រ​ការផ្សាយ'
     kdict['route'] = 'post'
     kdict['post'] = getPostdb.call(id)
-    kdict['posts'] = random.call(5)
+    kdict['posts'] = random.call(5,id)
 
     return template('frontend/index', data=kdict)
