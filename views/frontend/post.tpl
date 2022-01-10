@@ -30,24 +30,6 @@
                 <iframe src="" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class='text-content'>{{!data['post']['content']}}</div>
-            <div id="disqus_thread"></div>
-            <script>
-    
-                var disqus_config = function () {
-                    this.page.url = "https://khmerweb-multimedia.vercel.app/post/{{data['post']['id']}}";  
-                    this.page.identifier = "{{data['post']['id']}}"; 
-                };
-    
-                (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://multimedia-9.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">
-                comments powered by Disqus.</a>
-            </noscript>
         </div>
 
         <script>
@@ -72,6 +54,25 @@
                 setScreen(entries[0],0,false)
             </script>
         </div>
+    </div>
+    <div class='comment'>
+        <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = "https://khmerweb-multimedia.vercel.app/post/{{data['post']['id']}}";  
+                    this.page.identifier = "{{data['post']['id']}}"; 
+                };
+    
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://multimedia-9.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">
+                comments powered by Disqus.</a>
+            </noscript>
     </div>
     %end
 </section>

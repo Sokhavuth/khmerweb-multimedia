@@ -3,7 +3,8 @@
     background: white;
 }
 
-.Random-thumb .player{
+.Random-thumb .player,
+.Random-thumb .comment{
     display: grid;
     grid-template-columns: 70% auto;
     grid-gap: 10px;
@@ -29,7 +30,7 @@
 }
 
 .Random-thumb .player .playlist{
-    height: 420px;
+    max-height: 420px;
     overflow: auto;
 }
 
@@ -47,7 +48,8 @@
 }
 
 @media only screen and (max-width: 600px){
-    .Random-thumb .player{
+    .Random-thumb .player,
+    .Random-thumb .comment{
         grid-template-columns: 100%;
     }
 }
