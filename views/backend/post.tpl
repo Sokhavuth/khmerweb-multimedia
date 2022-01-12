@@ -56,6 +56,7 @@
             <select name='ending'>
                 <option>ចប់​ហើយ</option>
                 <option>មិន​ទាន់ចប់</option>
+                <option>~ ចប់</option>
             </select>
             <input onclick='genJson()' type="button" value="បញ្ចូល​វីដេអូ" />
         </div>

@@ -27,7 +27,7 @@
     <div class='player'>
         <div class='screen'>
             <div class='video-wrapper'>
-                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class='text-content'>{{!data['post']['content']}}</div>
         </div>

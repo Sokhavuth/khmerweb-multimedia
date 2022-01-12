@@ -5,6 +5,8 @@ function setScreen(entry,id,click){
         var url = `//ok.ru/videoembed/${entry['id']}`
     }else if(entry['type'] == 'YouTube'){
         var url = `https://www.youtube.com/embed/${entry['id']}`
+    }else if(entry['type'] == 'YouTubePlaylist'){
+        var url = `https://www.youtube.com/embed/videoseries?list=${entry['id']}`
     }
 
     if(click){
