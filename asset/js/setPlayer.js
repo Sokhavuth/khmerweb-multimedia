@@ -3,6 +3,8 @@
 function setScreen(entry,id,click){
     if(entry['type'] == 'OK'){
         var url = `//ok.ru/videoembed/${entry['id']}`
+    }else if(entry['type'] == 'YouTube'){
+        var url = `https://www.youtube.com/embed/${entry['id']}`
     }
 
     if(click){
@@ -14,3 +16,4 @@ function setScreen(entry,id,click){
     $('.Random-thumb .player .screen iframe').attr('src', url)
     clicked = id
 }
+
