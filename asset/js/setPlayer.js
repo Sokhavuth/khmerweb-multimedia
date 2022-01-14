@@ -7,6 +7,8 @@ function setScreen(entry,id,click){
         var url = `https://www.youtube.com/embed/${entry['id']}`
     }else if(entry['type'] == 'YouTubePlaylist'){
         var url = `https://www.youtube.com/embed/videoseries?list=${entry['id']}`
+    }else if(entry['type'] === "Facebook"){
+        var url = `https://www.facebook.com/watch/?v=${entry['id']}`
     }
 
     if(entry['type'] !== 'Facebook'){
