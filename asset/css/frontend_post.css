@@ -11,7 +11,11 @@
     padding: 15px;
 }
 
-.Random-thumb .player .screen .video-wrapper{
+.Random-thumb .comment{
+    padding-top: 0;
+}
+
+.Random-thumb .player .screen .video-wrapper div{
     position: relative;
     padding-top: 56.25%;
 }

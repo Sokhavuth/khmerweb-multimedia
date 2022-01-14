@@ -1,6 +1,15 @@
 <!--views/frontend/front.tpl-->
 % rebase('base.tpl')
 
+<script>
+    var fb_api = false;
+    window.fbAsyncInit = function(){
+      fb_api = true;
+    };
+</script>
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/km_KH/sdk.js#xfbml=1&version=v3.2"></script>
+
 <link href="/static/styles/partials/header.css" rel="stylesheet"></link>
 <script src="/static/scripts/paginate.js"></script>
 <section class='Head'>

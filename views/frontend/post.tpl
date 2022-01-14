@@ -26,9 +26,7 @@
     %if 'post' in data:
     <div class='player'>
         <div class='screen'>
-            <div class='video-wrapper'>
-                <iframe src="" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <div class='video-wrapper'></div>
             <div class='text-content'>{{!data['post']['content']}}</div>
         </div>
 

@@ -9,13 +9,23 @@ function setScreen(entry,id,click){
         var url = `https://www.youtube.com/embed/videoseries?list=${entry['id']}`
     }
 
+    if(entry['type'] !== 'Facebook'){
+        var iframe = `<div>
+        <iframe id="video-player" src="${url}" frameborder="0" allowfullscreen></iframe>
+        </div>`;
+      }else{
+        var iframe = `<div class="fb-video" data-href="${url}" data-width="auto" data-show-captions="true"></div>`;
+      }
+
     if(click){
         $('.Random-thumb .player .playlist #part'+clicked)
             .css({'background':'lightgrey','color':'rgb(87, 87, 87)'})
     }
     $('.Random-thumb .player .playlist #part'+id)
         .css({'background':'var(--foreground)','color':'white'})
-    $('.Random-thumb .player .screen iframe').attr('src', url)
+
+
+    $('.Random-thumb .player .screen .video-wrapper').html(iframe)
     clicked = id
 }
 
