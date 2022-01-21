@@ -13,4 +13,4 @@ kdict['siteTitle'] = 'ពហុព័ត៌មាន'
 kdict['pageTitle'] = 'ទំព័រ​ដ់ើម'
 kdict['message'] = ''
 kdict['maxItemList'] = 10
-kdict['maxRandom'] = 65
+kdict['maxRandom'] = 125
