@@ -45,3 +45,8 @@ def index():
 def post(id):
     from controllers.frontend import post
     return post.call(id)
+
+@app.route('/search', method='post')
+def search():
+    from controllers.frontend import search
+    return search.call()

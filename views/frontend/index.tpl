@@ -11,14 +11,14 @@
 <script async defer src="https://connect.facebook.net/km_KH/sdk.js#xfbml=1&version=v3.2"></script>
 
 <link href="/static/styles/partials/header.css" rel="stylesheet"></link>
-<script src="/static/scripts/paginate.js"></script>
+
 <section class='Head'>
     <header class='region'>
         <div class='site-logo'>{{ data['pageTitle'] }}</div>
 
-        <form action='/backend/search' method='post'>
+        <form action='/search' method='post'>
             <select name="select">
-                <option>ការផ្សាយ</option>
+                <option>ភាពយន្ត</option>
                 <option>សៀវភៅ</option>
                 
             </select>
@@ -37,6 +37,8 @@
         include('frontend/front.tpl')
     elif 'post' in data['route']:
         include('frontend/post.tpl')
+    elif 'search' in data['route']:
+        include('frontend/search.tpl')
     end
     %>
 

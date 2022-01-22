@@ -1,5 +1,5 @@
 #controllers/frontend/post.py
-import config, json
+import config
 from copy import deepcopy
 from bottle import template
 from models.postdb import getPostdb, random
