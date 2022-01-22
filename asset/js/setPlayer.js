@@ -17,7 +17,7 @@ function setScreen(entry,id,click){
         </div>`;
       }else{
         var iframe = `<div class="fb-video" data-href="${url}" data-width="auto" data-show-captions="true"></div>`;
-      }
+    }
 
     if(click){
         $('.Random-thumb .player .playlist #part'+clicked)
@@ -28,6 +28,10 @@ function setScreen(entry,id,click){
 
 
     $('.Random-thumb .player .screen .video-wrapper').html(iframe)
+    if(entry['type'] === "Facebook"){
+        FB.XFBML.parse()
+    }
+    
     clicked = id
 }
 

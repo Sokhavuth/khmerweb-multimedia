@@ -1,4 +1,4 @@
-#models/postdb/getdb.py
+#models/postdb/searchdb.py
 import setConnection
 
 def call(amount,q):

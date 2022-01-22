@@ -1,4 +1,4 @@
-#controllers/frontend/post.py
+#controllers/frontend/search.py
 import config
 from copy import deepcopy
 from bottle import template, request
