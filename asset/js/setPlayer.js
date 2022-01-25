@@ -30,10 +30,9 @@ function setScreen(entry,id,click){
     $('.Random-thumb .player .screen .video-wrapper').html(iframe)
     if((entry['type'] === "Facebook")&&(fb_api)){
         FB.XFBML.parse()
-    }else{
-        fb_api == true
-    }
-    
+    }  
+         
+    fb_api == true
     clicked = id
 }
 
