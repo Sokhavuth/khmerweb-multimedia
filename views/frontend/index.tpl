@@ -2,9 +2,9 @@
 % rebase('base.tpl')
 
 <script>
-    var fb_api = false;
+    var fb_api = false
     window.fbAsyncInit = function(){
-        fb_api == true
+        fb_api = true
     };
 </script>
 <div id="fb-root"></div>
