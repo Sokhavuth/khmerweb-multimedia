@@ -49,6 +49,12 @@
     color: grey;
 }
 
+.Random-thumb .Column ul li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .Random-thumb .Column ul a{
     color: grey;
 }
