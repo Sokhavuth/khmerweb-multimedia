@@ -49,6 +49,7 @@
                 <option>YouTubePlaylist</option>
                 <option>Facebook</option>
                 <option>OK</option>
+                <option>GoogleDrive</option>
                 <option>Dailymotion</option>
                 <option>Vimeo</option>
             </select>

@@ -9,6 +9,8 @@ function setScreen(entry,id,click){
         var url = `https://www.youtube.com/embed/videoseries?list=${entry['id']}`
     }else if(entry['type'] === "Facebook"){
         var url = `https://www.facebook.com/watch/?v=${entry['id']}`
+    }else if(entry['type'] === "GoogleDrive"){
+        var url = `https://docs.google.com/file/d/${entry['id']}/preview`
     }
 
     if(entry['type'] !== 'Facebook'){
