@@ -50,7 +50,7 @@
             %end
         </ul>
 
-        <ul>
+        <ul class='last-ul'>
             %for v in range(85, len(data['posts'])): 
                 <li>
                     <a href='/post/{{data["posts"][v]["id"]}}'>

@@ -47,6 +47,11 @@
 .Random-thumb .Column ul{
     list-style-position: inside;
     color: grey;
+    padding-right: 20px;
+}
+
+.Random-thumb .Column .last-ul{
+    padding-right: 0;
 }
 
 .Random-thumb .Column ul li{
@@ -66,5 +71,11 @@
 
     .Random-thumb .Column{
         grid-template-columns: 100%;
+    }
+
+    .Random-thumb .Column ul{
+        list-style-position: inside;
+        color: grey;
+        padding-right: 0;
     }
 }
