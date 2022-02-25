@@ -11,6 +11,8 @@ function setScreen(entry,id,click){
         var url = `https://www.facebook.com/watch/?v=${entry['id']}`
     }else if(entry['type'] === "GoogleDrive"){
         var url = `https://docs.google.com/file/d/${entry['id']}/preview`
+    }else if(entry['type'] === "Vimeo"){
+        var url = `https://player.vimeo.com/video/${entry['id']}`
     }
 
     if(entry['type'] !== 'Facebook'){
