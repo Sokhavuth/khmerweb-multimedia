@@ -13,6 +13,8 @@ function setScreen(entry,id,click){
         var url = `https://docs.google.com/file/d/${entry['id']}/preview`
     }else if(entry['type'] === "Vimeo"){
         var url = `https://player.vimeo.com/video/${entry['id']}`
+    }else if(entry['type'] === "Dailymotion"){
+        var url = `https://www.dailymotion.com/embed/video/${entry['id']}`
     }
 
     if(entry['type'] !== 'Facebook'){
