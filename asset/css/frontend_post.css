@@ -11,6 +11,11 @@
     padding: 15px;
 }
 
+.Random-thumb .player .edit-delete img{
+    width: 30px;
+    margin-right: 5px;
+}
+
 .Random-thumb .comment{
     padding-top: 0;
 }

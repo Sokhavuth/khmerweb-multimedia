@@ -28,6 +28,17 @@
         <div class='screen'>
             <div class='video-wrapper'></div>
             <div class='text-content'>{{!data['post']['content']}}</div>
+
+            %if data['user']:
+            <div class="edit-delete">
+                <a href='/admin/post/edit/{{data["post"]["id"]}}'>
+                    <img src="/static/images/edit.png" />
+                </a>
+                <a href='/admin/post/delete/{{data["post"]["id"]}}'>
+                    <img src="/static/images/delete.png" />
+                </a>
+            </div>
+            %end
         </div>
 
         <script>
