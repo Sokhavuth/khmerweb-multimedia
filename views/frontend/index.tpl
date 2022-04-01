@@ -14,7 +14,9 @@
 
 <section class='Head'>
     <header class='region'>
-        <div class='site-logo'>{{ data['pageTitle'] }}</div>
+        <div class='site-logo'>
+            <a href="https://devopenblogger.blogspot.com/">{{ data['pageTitle'] }}</a>
+        </div>
 
         <form action='/search' method='post'>
             <select name="select">

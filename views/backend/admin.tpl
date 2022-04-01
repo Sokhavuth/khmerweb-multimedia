@@ -6,7 +6,7 @@
 <section class='Head'>
     <header class='region'>
         <div class='site-logo'>
-            <a href="https://devopenblogger.blogspot.com/">{ data['pageTitle'] }}</a>
+            <a href="https://devopenblogger.blogspot.com/">{{ data['pageTitle'] }}</a>
         </div>
 
         <form action='/backend/search' method='post'>
